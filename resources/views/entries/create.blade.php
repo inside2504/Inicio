@@ -21,9 +21,9 @@
 				<div class="form-group">
 					<label>Categor&iacute;a</label>
 					<select >
-						@forelse($categories as @cat)
-							<option value="{{$cat=>id}}">{{$cat->name}}</option>
-						@else
+						@forelse($categories as $cat)
+							<option value="{{$cat->id}}">{{$cat->name}}</option>
+						@empty
 							<option>Lista vac&iacute;a</option>
 						@endforelse
 					</select>

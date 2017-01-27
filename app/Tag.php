@@ -1,9 +1,9 @@
 <?php
 
-namespace App;
+namespace Inicio;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Entrie;
+use Inicio\Entrie;
 
 class Tag extends Model{
 	protected $table = 'tags';

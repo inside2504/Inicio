@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 use Inicio\Http\Requests;
 
-use App\Entrie;
-use App\Category;
+use Inicio\Entrie;
+use Inicio\Category;
 
 class EntriesController extends Controller
 {
@@ -28,7 +28,7 @@ class EntriesController extends Controller
      */
     public function create()
     {
-        $categories = Category::get();
+        $categories = Category::all();
         $data = [
             "categories" => $categories
         ];

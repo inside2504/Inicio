@@ -1,20 +1,20 @@
 <?php
 
-namespace App;
+namespace Inicio;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Category;
-use App\User;
+use Inicio\Category;
+use Inicio\User;
 
 class Entrie extends Model{
 	protected $table = 'entries';
 
 	public function category(){
-		return $this->hasOne('App\Category','id','category_id');
+		return $this->hasOne('Inicio\Category','id','category_id');
 	}
 
 	public function author(){
-		return $this->hasOne('App\User','id','author_id');
+		return $this->hasOne('Inicio\User','id','author_id');
 	}
 
 }
