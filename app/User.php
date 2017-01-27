@@ -3,7 +3,7 @@
 namespace Inicio;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Entrie;
+use Inicio\Entrie;
 
 class User extends Authenticatable
 {
@@ -26,7 +26,7 @@ class User extends Authenticatable
     ];
 
     public function getEntries(){
-        return $this->hasMany('App\Entrie','author_id','id');
+        return $this->hasMany('Inicio\Entrie','author_id','id');
     }
 
 }

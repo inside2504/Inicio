@@ -1,15 +1,14 @@
 <?php
 
-namespace App;
+namespace Inicio;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Entrie;
+use Inicio\Entrie;
 
-class Category extends Model
-{
-    protected $table = 'categories';
+class Category extends Model{
+	protected $table = 'categories';
 
-	public function getEntries(){
-		return $this->hasMany('App\Entrie','category_id','id');
+	public function getEntries () {
+		return $this->hasMany('Inicio\Entrie', 'category_id', 'id');
 	}
 }
